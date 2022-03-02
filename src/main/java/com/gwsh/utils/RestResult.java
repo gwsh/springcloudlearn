@@ -3,7 +3,7 @@ package com.gwsh.utils;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-@ApiModel("RESTful通用返回数据")
+@ApiModel("RESTful通用实体")
 public class RestResult<T> {
 
     //uuid,用作唯一标识符，供序列化和反序列化时检测是否一致

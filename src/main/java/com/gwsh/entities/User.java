@@ -1,14 +1,16 @@
 package com.gwsh.entities;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
 
 @Data
+@ApiModel("用户实体")
 public class User implements Serializable {
     private static final Long    serialVersionUID = 1L;
-    @ApiModelProperty("ID")
+    @ApiModelProperty("用户ID")
     private              Integer id;
     @ApiModelProperty("用户名")
     private              String  username;

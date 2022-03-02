@@ -53,13 +53,13 @@ public class Swagger3Config {
                 // 文档描述
                 .description("Swagger3.0RESTful文档测试")
                 // 文档版本
-                .version("0.0.1")
+                .version("1.0.0")
                 // 设置许可声明信息
                 .license("Apache LICENSE 2.0")
                 // 设置许可证URL地址
-                .licenseUrl("https://github/gwsh")
+                .licenseUrl("https://github.com/gwsh")
                 // 设置管理该API人员的联系信息
-                .contact(new Contact("GWSH", "https://github/gwsh", "shundong106@gmail.com"))
+                .contact(new Contact("GWSH", "https://github.com/gwsh", "shundong106@gmail.com"))
                 .build();
     }
 

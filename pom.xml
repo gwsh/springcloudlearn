@@ -71,7 +71,12 @@
             <version>2.6.2</version>
         </dependency>
         <!--  redis 依赖 end      -->
-
+        <!--集成druid连接池-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.10</version>
+        </dependency>
 
     </dependencies>
 
@@ -82,13 +87,13 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.2.6.RELEASE</version>
                 <configuration>
-<!--                    <excludes>-->
-<!--                        <exclude>-->
-<!--                            <groupId>org.projectlombok</groupId>-->
-<!--                            <artifactId>lombok</artifactId>-->
-<!--                            <version>1.18.10</version>-->
-<!--                        </exclude>-->
-<!--                    </excludes>-->
+                    <!--                    <excludes>-->
+                    <!--                        <exclude>-->
+                    <!--                            <groupId>org.projectlombok</groupId>-->
+                    <!--                            <artifactId>lombok</artifactId>-->
+                    <!--                            <version>1.18.10</version>-->
+                    <!--                        </exclude>-->
+                    <!--                    </excludes>-->
                 </configuration>
             </plugin>
         </plugins>

@@ -1,5 +1,6 @@
 package com.gwsh.controller;
 
+import com.gwsh.config.SwaggerTagsValue;
 import com.gwsh.entities.User;
 import com.gwsh.service.UserService;
 import com.gwsh.utils.RestResult;
@@ -11,7 +12,7 @@ import java.util.List;
 
 @RequestMapping("/user")
 @RestController
-@Api(tags = "用户接口")
+@Api(tags = SwaggerTagsValue.USER_CONTROLLER_TAG)
 public class UserController {
 
     private final UserService userService;

@@ -1,5 +1,6 @@
 package com.gwsh.controller;
 
+import com.gwsh.config.SwaggerTagsValue;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -18,7 +19,7 @@ import javax.jms.Queue;
  * @author gwsh
  * @date 2022-02-24 10:25:23
  */
-@Api(tags = "消息生产者")
+@Api(tags = SwaggerTagsValue.QUEUE_CONTROLLER_TAG)
 @RestController
 public class QueueController {
     @Autowired

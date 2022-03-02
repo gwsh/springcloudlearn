@@ -30,9 +30,8 @@ public class UserController {
 
     @GetMapping("/getAllUserList")
     public RestResult<List<User>> getAllUsers() {
-        List<User>             _list      = this.userService.getAllUsers();
-        RestResult<List<User>> restResult = new RestResult<>();
-        return restResult.success(_list);
+        List<User> _list = this.userService.getAllUsers();
+        return RestResult.success(_list);
     }
 
     /**

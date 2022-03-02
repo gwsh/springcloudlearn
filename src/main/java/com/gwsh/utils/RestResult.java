@@ -24,15 +24,14 @@ public class RestResult<T> {
     public RestResult() {
     }
 
-    //constructor
     public RestResult(Integer status, String msg, T data) {
         this.code = status;
         this.msg = msg;
         this.data = data;
     }
 
-    //返回成功数据
-    public RestResult success(T data) {
+    // 返回成功数据
+    public static <T> RestResult success(T data) {
         return new RestResult(ResponseCode.SUCCESS.getCode(), ResponseCode.SUCCESS.getMsg(), data);
     }
 
@@ -40,7 +39,7 @@ public class RestResult<T> {
         return new RestResult(code, msg, null);
     }
 
-    //返回出错数据
+    // 返回出错数据
     public static RestResult error(ResponseCode code) {
         return new RestResult(code.getCode(), code.getMsg(), null);
     }
@@ -68,6 +67,8 @@ public class RestResult<T> {
     public void setData(T data) {
         this.data = data;
     }
+
+
 }
 
 

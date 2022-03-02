@@ -22,11 +22,16 @@ spring:
       time-between-eviction-runs-millis: 60000
       min-evictable-idle-time-millis: 300000
       keep-alive: true
-
-
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   redis:
     host: 127.0.0.1
     port: 6379
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true
 logging:
   level:
     com: debug

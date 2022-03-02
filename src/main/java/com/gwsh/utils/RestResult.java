@@ -6,21 +6,31 @@ import io.swagger.annotations.ApiModelProperty;
 @ApiModel("RESTful通用实体")
 public class RestResult<T> {
 
-    //uuid,用作唯一标识符，供序列化和反序列化时检测是否一致
+    /**
+     * uuid,用作唯一标识符，供序列化和反序列化时检测是否一致
+     */
     private static final long    serialVersionUID = 7498483649536881777L;
-    //标识代码，0表示成功，非0表示出错
-    @ApiModelProperty("标识代码,0表示成功，非0表示出错")
+    /**
+     * 标识代码，0表示失败，非0表示成功
+     */
+    @ApiModelProperty("标识代码，0表示失败，非0表示成功")
     private              Integer code;
 
-    //提示信息，通常供报错时使用
+    /**
+     * 提示信息，通常供报错时使用
+     */
     @ApiModelProperty("提示信息,供报错时使用")
     private String msg;
 
-    //正常返回时返回的数据
+    /**
+     * 正常返回时返回的数据
+     */
     @ApiModelProperty("返回的数据")
     private T data;
 
-    //constructor
+    /**
+     * constructor
+     */
     public RestResult() {
     }
 
@@ -30,16 +40,32 @@ public class RestResult<T> {
         this.data = data;
     }
 
-    // 返回成功数据
+    /**
+     * 返回成功数据
+     *
+     * @param data
+     * @param <T>
+     * @return
+     */
     public static <T> RestResult success(T data) {
         return new RestResult(ResponseCode.SUCCESS.getCode(), ResponseCode.SUCCESS.getMsg(), data);
     }
 
+    /**
+     * @param code
+     * @param msg
+     * @return
+     */
     public static RestResult success(Integer code, String msg) {
         return new RestResult(code, msg, null);
     }
 
-    // 返回出错数据
+    /**
+     * 返回出错数据
+     *
+     * @param code
+     * @return
+     */
     public static RestResult error(ResponseCode code) {
         return new RestResult(code.getCode(), code.getMsg(), null);
     }
@@ -71,16 +97,24 @@ public class RestResult<T> {
 
 }
 
-
+/**
+ * 状态枚举类
+ */
 enum ResponseCode {
-    //成功
-    SUCCESS(0, "true"),
+    /**
+     * 成功
+     */
+    SUCCESS(1, "成功"),
 
-    //失败
-    ERROR(1, "false"),
+    /**
+     * 失败
+     */
+    ERROR(0, "失败"),
 
 
-    //参数错误
+    /**
+     * 参数错误
+     */
     ILLEGAL_ARGUMENT(2, "ILLEGAL_ARGUMENT"),
 
 

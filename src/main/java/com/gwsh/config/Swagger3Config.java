@@ -51,15 +51,15 @@ public class Swagger3Config {
                 // 文档标题
                 .title("SpringCloud_RESTful接口文档")
                 // 文档描述
-                .description("用户相关操作接口")
+                .description("Swagger3.0RESTful文档测试")
                 // 文档版本
                 .version("0.0.1")
                 // 设置许可声明信息
                 .license("Apache LICENSE 2.0")
                 // 设置许可证URL地址
-                .licenseUrl("https://github/my-dlq")
+                .licenseUrl("https://github/gwsh")
                 // 设置管理该API人员的联系信息
-                .contact(new Contact("GWSH", "", "shundong106@gmail.com"))
+                .contact(new Contact("GWSH", "https://github/gwsh", "shundong106@gmail.com"))
                 .build();
     }
 
